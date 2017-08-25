@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    title Liste
+
+body
+  form(action='/create', method='POST')
+    input(type='text', name='title', placeholder='task to do')
+    button(type='submit') AJOUTER
+  
+  h1 List to do:
+  ul
+    each task in tasks
+     li= `${task.title} `
+       a(href= `${task.id}/delete`) X
+       a(href= `${task.id}/edit`) E

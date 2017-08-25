@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    title Liste
+
+  body
+  
+    form(action=`/${task.id}/edit`, method='POST')
+      label(for='title') Modifiez votre titre : 
+      input(type='text', name='title', id='title', value=`${task.title}`)
+      button(type='submit') MODIFIER
+
+  
